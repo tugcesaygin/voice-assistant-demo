@@ -5,15 +5,17 @@ import datetime
 import wikipedia
 import pyjokes
 
-listener=sr.Recognizer()
+listener = sr.Recognizer()
 
-engine=pyttsx3.init()
+engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
+engine.setProperty('voice', voices[1].id)
+
 
 def talk(text):
     engine.say(text)
     engine.runAndWait()
+
 
 def take_command():
     try:
@@ -26,7 +28,6 @@ def take_command():
             if 'dorian' in command:
                 command = command.replace("dorian"," ")
                 print(command)
-
     except:
         pass
     return command
@@ -35,17 +36,17 @@ def take_command():
 def run_dorian():
     command = take_command()
     print(command)
-    if "play" in command :
+    if "play" in command:
         song = command.replace("play", " ")
         talk("playing..." + song)
         pywhatkit.playonyt(song)
     elif 'time' in command:
         time=datetime.datetime.now().strftime('%H:%M')  # saati '%I : %M &p' yazarsak pm tipinde verir
         print(time)
-        talk("Current time is : " +time)
+        talk("Current time is : "+time)
     elif 'who the heck is' in command:
-        person= command.replace('who the heck is' , '')
-        info = wikipedia.summary(person,1)
+        person= command.replace('who the heck is', '')
+        info = wikipedia.summary(person, 1)
         talk(info)
     elif 'date' in command:
         talk('I have a headache')
@@ -56,9 +57,10 @@ def run_dorian():
     else:
         talk("I didn't understand you, please repeat")
 
+run_dorian()
+
 
 while True:      #durdurulmadığı muddetce calisir.
     run_dorian()
 
 
-run_dorian()
