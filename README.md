@@ -1,5 +1,5 @@
  <h1>Dorian Voice Assistant Demo</h1>
- <p> This is my AI project - Personal Voice Assistant Dorian! I use <em> Speech Recognition and Pyttsx3 library </em> to make the program work with voice command.
+ <p> This is my Python AI project - Personal Voice Assistant Dorian! I use <em> Speech Recognition and Pyttsx3 library </em> to make the program work with voice command.
             There are a few interactive commands so you can even talk with him!!
             Dorian can connect Youtube and plays songs that you want , can tell you the date & do some searching for what you're looking for with Wikipedia!
             Also Dorian can make jokes!
