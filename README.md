@@ -1,5 +1,3 @@
-# voice-assistant-demo
-
  <h1>Dorian Voice Assistant Demo</h1>
  <p> This is my AI project - Personal Voice Assistant Dorian! I use <em> Speech Recognition and Pyttsx3 library </em> to make the program work with voice command.
             There are a few interactive commands so you can even talk with him!!
